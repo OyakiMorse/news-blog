@@ -1,0 +1,99 @@
+.featured-works {
+  padding: 30px 80px;
+  @media (max-width: $md3 + px) {
+    padding: 30px 30px;
+  }
+  &__container {
+    padding: 0 10px;
+  }
+  &__title {
+    margin-bottom: 1rem;
+  }
+}
+
+.works {
+  &__main-title {
+    padding-bottom: 1rem;
+  }
+  &__item {
+    border-bottom: 1px solid $lightGrayClr;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: $md3 + px) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+  &__image {
+    flex: 0 0 245px;
+    border-radius: 6px;
+    min-height: 180px;
+    display: block;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(0.98) rotate(0.5deg);
+    }
+    @media (max-width: $md3 + px) {
+      padding-bottom: 60%;
+      margin-bottom: 1rem;
+    }
+  }
+  &__body {
+    flex: 1 1 auto;
+    padding-left: 1rem;
+    @media (min-width: $md3 + px) {
+      padding-left: 1rem;
+    }
+  }
+  &__title {
+    display: inline-block;
+    color: inherit;
+    font-size: 32px;
+    line-height: 44 / 32 * 100%;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    @media (max-width: $md3 + px) {
+      font-size: 25px;
+    }
+    &:hover {
+      color: #ff6464;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &__year {
+    display: inline-flex;
+    border-radius: 1rem;
+    background-color: $fontClr;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font: 900px;
+    font-size: 1rem;
+  }
+  &__category {
+    color: $grayClr;
+    font-size: 20px;
+    margin-left: 25px;
+  }
+}
+
+.featured-works--items {
+  @media (max-width: $md3 + px) {
+    display: flex;
+    overflow: auto;
+  }
+  .works__item {
+    flex: 0 0 90%;
+    margin-right: 1rem;
+  }
+}

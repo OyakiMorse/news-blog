@@ -1,0 +1,49 @@
+.blog {
+  padding-bottom: 3rem;
+  @media (max-width: $md3 + px) {
+    padding-bottom: 2rem;
+  }
+  &__title {
+    padding-bottom: 1rem;
+  }
+  &__name {
+    padding-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 44 / 32 * 100%;
+    color: inherit;
+    @media (max-width: $md3 + px) {
+      font-size: 1.1rem;
+    }
+    &:hover {
+      color: #ff6464;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $lightGrayClr;
+    padding-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (max-width: $md3 + px) {
+      padding-bottom: 1.2rem;
+    }
+  }
+  &__info {
+    display: flex;
+    font-size: 20px;
+    padding: 1rem 0;
+    @media (max-width: $md3 + px) {
+      font-size: 1rem;
+      padding: 0.5rem 0;
+    }
+  }
+  &__date {
+    margin-right: 10px;
+  }
+  &__category {
+    color: $grayClr;
+    margin-left: 10px;
+  }
+}

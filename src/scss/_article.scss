@@ -1,0 +1,47 @@
+.article {
+  max-width: 700px;
+  padding: 0 10px 30px;
+  margin: 0 auto;
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 50 / 32 * 100%;
+    margin-bottom: 1rem;
+    @media (max-width: $md3 + px) {
+      font-size: 1.8rem;
+    }
+  }
+  &__info {
+    display: flex;
+    margin: 2rem 0;
+  }
+  &__year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $lightGrayClr;
+    border-radius: 1rem;
+    background-color: $btnClr;
+    padding: 2px 15px;
+    font-weight: 600;
+  }
+  &__category {
+    font-size: 20px;
+    align-self: center;
+    margin-left: 1rem;
+    line-height: 25 / 20 * 100%;
+    @media (max-width: $md3 + px) {
+      font-size: 1.1rem;
+    }
+  }
+  &__text {
+    p {
+      @extend .text;
+      margin-bottom: 1rem;
+    }
+    img {
+      margin-bottom: 1rem;
+      max-width: 100%;
+    }
+  }
+}
