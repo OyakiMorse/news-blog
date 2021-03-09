@@ -1,0 +1,166 @@
+$fontFamily: 'Heebo';
+
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 860;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$btnClr: #ff6464;
+$fontClr: #21243d;
+$hoverClr: #ff4e4e;
+$lightBlue: #edf7fa;
+$grayClr: #8695a4;
+$lightGrayClr: #e0e0e0;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: $fontClr;
+  font-family: $fontFamily;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $btnClr;
+    border-radius: 30px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  @media (max-width: $md1 + px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md2 + px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+.btn {
+  background: $btnClr;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0 20px;
+  line-height: 29 / 20 * 100%;
+  color: white;
+  transition: all 0.3s ease;
+  @media (min-width: 992px) {
+    &:hover {
+      background: $hoverClr;
+    }
+  }
+}
+
+.title {
+  font-size: 3rem;
+  color: $fontClr;
+  line-height: 60 / 44 * 100%;
+  font-weight: 700;
+  @media (min-width: $md3 + px) {
+    font-size: 2rem;
+  }
+}
+
+.title-posts {
+  font-size: 22px;
+  @media (max-width: $md3 + px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 23 / 16 * 100%;
+  color: $fontClr;
+  &::selection {
+    background: $hoverClr;
+  }
+}
+.scroll-btn {
+  padding: 5px 5px 0;
+  border-radius: 30%;
+  position: fixed;
+  display: flex;
+  cursor: pointer;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1000;
+  border: 2px solid transparent;
+  transition: border 0.2s ease-in-out;
+  &:hover {
+    border: 2px solid #21243d;
+  }
+  @media (max-width: $md3+px) {
+    visibility: hidden;
+  }
+}
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  transition: all 0.25s ease;
+  height: 10px;
+  width: 0;
+  background-color: $hoverClr;
+}
+
+.page {
+  margin-top: 90px;
+  flex: 1 1 auto;
+  @media (max-width: $md3 + px) {
+    margin-top: 30px;
+  }
+}
+
+._ibg {
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+@import './header';
+@import './home';
+@import './works';
+@import './footer';
+@import './blog';
+@import './article';

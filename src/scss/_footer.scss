@@ -1,0 +1,23 @@
+.footer {
+  padding: 2rem 0;
+  &__social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .social__item {
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(0.96) rotate(5deg);
+    }
+  }
+  .social__item + .social__item {
+    margin-left: 1rem;
+  }
+  &__copy {
+    text-align: center;
+  }
+  .author {
+    color: $btnClr;
+  }
+}
