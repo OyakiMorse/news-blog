@@ -4,7 +4,7 @@
   "description": "simple news-blog with gulp",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp",
+    "dev": "gulp"
   },
   "author": "OyakiMorse",
   "license": "ISC",
