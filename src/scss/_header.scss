@@ -1,6 +1,16 @@
 .header {
-  position: relative;
+  background-color: white;
+  width: 100%;
+
+  position: fixed;
+  height: 80px;
   z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: -1px 4px 8px 0px rgba(34, 60, 80, 0.075);
+  @media (max-width: $md3 + px) {
+    position: relative;
+    box-shadow: none;
+  }
   &__inner {
     max-width: 1052px;
     padding: 0 10px;
@@ -8,11 +18,12 @@
   }
 
   &__menu {
-    height: 80px;
+    height: 60px;
     padding: 10px 0;
     align-items: center;
     display: flex;
     justify-content: flex-end;
+    transition: all 0.3s ease;
     @media (max-width: $md3+px) {
       height: 50px;
     }
@@ -22,6 +33,7 @@
 .menu {
   &__nav {
     @media (max-width: $md3 + px) {
+      display: none;
       transition: transform 0.5s ease;
       position: fixed;
       width: 100%;
@@ -92,28 +104,104 @@
       &:first-child {
         top: 90%;
       }
-      &:nth-child(2) {
+      &:nth-child(2),
+      &:nth-child(3) {
         top: 45%;
       }
       &:last-child {
-        top: auto;
-        bottom: 0;
-      }
-    }
-    &:active {
-      span {
-        background-color: brown;
-        transition: all 0.1s ease-in;
-        transform: scale(0);
-        &:first-child {
-          transform: rotate(-70deg);
-          top: calc(50%-1px);
-        }
-        &:last-child {
-          transform: rotate(70deg);
-          top: calc(50%-1px);
-        }
+        top: 0;
       }
     }
   }
+}
+
+.dark-theme {
+  position: relative;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    margin: 0 5px;
+  }
+  &__check {
+    display: none;
+    
+  }
+  
+  &__slider {
+    width: 46px;
+    height: 25px;
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 1rem;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 21px;
+      width: 21px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50px;
+    }
+  }
+
+  &__check:checked + &__slider  {
+    background-color: yellow;
+  }
+  &__check:checked + &__slider::before  {
+    transform: translateX(100%);
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #ff6464;
+    }
+  }
+  img {
+    margin-right: 3.1rem;
+    width: 40px;
+    margin-top: 7px;
+  }
+}
+
+.burgerToggle {
+  span {
+    background-color: brown;
+    transition: all 0.2s ease-in;
+    &:first-child {
+      top: 45%;
+      width: 0%;
+      left: 50%;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    &:last-child {
+      top: 45%;
+      width: 0%;
+      left: 50%;
+    }
+  }
+}
+
+.toggleMenu {
+  top: 0 !important;
+  display: block !important;
 }

@@ -1,12 +1,13 @@
-<header class="header">
+<header id="header" class="header">
   <div class="header__inner">
-    <div class="header__menu menu">
-      <div id="burger" class="menu__icon icon-menu ">
+    <div id="header__menu" class="header__menu ">
+      <div id="burger" class="icon-menu ">
+        <span> </span>
         <span> </span>
         <span> </span>
         <span> </span>
       </div>
-      <nav id="menu" class="menu__nav ">
+      <nav id="menu" class="menu__nav">
         <ul class="menu__list">
           <li>
             <a href="./index.html" class="menu__link @@if(link==0){--active}">Home</a>
@@ -19,6 +20,14 @@
           </li>
         </ul>
       </nav>
+      <div class="dark-theme">
+        <img src="./img/night.png" alt="dark-theme">
+        <label for="dark-theme__switch">
+          <input checked  class="dark-theme__check" type="checkbox">
+          <span class="dark-theme__slider"></span>
+        </label>
+        <!-- <span class="dark-theme__text">Dark mode</span> -->
+      </div>
     </div>
   </div>
 </header>
