@@ -1,5 +1,12 @@
 .greet {
-  margin-bottom: 70px;
+  padding: 60px;
+  background: url(../img/parallax.webp);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
   @media (max-width: $md1 + px) {
     padding: 0 0 70px 0;
   }
@@ -34,27 +41,7 @@
     color: $fontClr;
     display: inline-flex;
     margin-bottom: 2rem;
-   
-    overflow: hidden;
     white-space: nowrap;
-    animation: typiwriter 4s steps(30) 501ms, cursor 200ms steps(30) infinite;
-    @keyframes typiwriter {
-      0% {
-        width: 0;
-      }
-      100% {
-        width: 30ch;
-      }
-    }
-    @keyframes cursor {
-      0% {
-        border-right: 2px solid $grayClr;
-      }
-      100% {
-        border: none;
-        
-      }
-    }
     @media (max-width: $md3 + px) {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -81,7 +68,6 @@
     position: relative;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: -5px 13px 0 0 $lightBlue;
 
     img {
       width: 240px;

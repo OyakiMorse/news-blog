@@ -1,7 +1,6 @@
 .header {
   background-color: white;
   width: 100%;
-
   position: fixed;
   height: 80px;
   z-index: 100;
@@ -121,59 +120,8 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  &__switch {
-    position: relative;
-    display: inline-block;
-    width: 2rem;
-    height: 1rem;
-    margin: 0 5px;
-  }
-  &__check {
-    display: none;
-    
-  }
-  
-  &__slider {
-    width: 46px;
-    height: 25px;
-    position: absolute;
-    top: calc(50% - 12px);
-    right: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 1rem;
-    cursor: pointer;
-    &::before {
-      content: '';
-      position: absolute;
-      height: 21px;
-      width: 21px;
-      left: 2px;
-      bottom: 2px;
-      background-color: white;
-      transition: 0.4s;
-      border-radius: 50px;
-    }
-  }
-
-  &__check:checked + &__slider  {
-    background-color: yellow;
-  }
-  &__check:checked + &__slider::before  {
-    transform: translateX(100%);
-  }
-
-  &__text {
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    &:hover {
-      color: #ff6464;
-    }
-  }
   img {
-    margin-right: 3.1rem;
-    width: 40px;
+    width: 35px;
     margin-top: 7px;
   }
 }

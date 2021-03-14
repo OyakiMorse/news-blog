@@ -85,6 +85,10 @@
     font-size: 20px;
     margin-left: 25px;
   }
+  &__text {
+    max-height: 130px;
+    overflow: hidden;
+  }
 }
 
 .featured-works--items {

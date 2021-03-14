@@ -1,11 +1,17 @@
 const burger = document.getElementById('burger')
 const menu = document.getElementById('menu')
 const scrollBtn = document.querySelector('.scroll-btn')
+
 const header = document.getElementById('header')
 const headerMenu = document.getElementById('header__menu')
 
+
+
 window.addEventListener('scroll', () => {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+  if (
+    document.body.scrollTop > 150 ||
+    document.documentElement.scrollTop > 150
+  ) {
     scrollBtn.style.display = 'block'
     header.style.height = 50 + 'px'
     headerMenu.style.height = 30 + 'px'
