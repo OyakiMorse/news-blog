@@ -1,34 +1,54 @@
-<header id="header" class="header">
-  <div class="header__inner">
-    <div id="header__menu" class="header__menu">
-      <div id="burger" class="icon-menu">
-        <span> </span>
-        <span> </span>
-        <span> </span>
-        <span> </span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="header__inner">
+        <div id="header__menu" class="header__menu">
+          <div id="burger" class="icon-menu">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+            <span> </span>
+          </div>
+          <nav id="menu" class="menu__nav">
+            <ul class="menu__list">
+              <li>
+                <a
+                  href="./index.html"
+                  class="menu__link @@if(link==0){--active}"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./works.html"
+                  class="menu__link @@if(link==1){--active}"
+                >
+                  Works
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./blog.html"
+                  class="menu__link @@if(link==2){--active}"
+                >
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div id="dark-mode-toggle" title="Change theme" class="dark-theme">
+            <img id="dark-theme-img" src="./img/night.png" alt="dark-theme" />
+          </div>
+        </div>
       </div>
-      <nav id="menu" class="menu__nav">
-        <ul class="menu__list">
-          <li>
-            <a href="./index.html" class="menu__link @@if(link==0){--active}">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="./works.html" class="menu__link @@if(link==1){--active}">
-              Works
-            </a>
-          </li>
-          <li>
-            <a href="./blog.html" class="menu__link @@if(link==2){--active}">
-              Blog
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div id="dark-mode-toggle" title="Change theme" class="dark-theme">
-        <img id="dark-theme-img" src="./img/night.png" alt="dark-theme" />
-      </div>
-    </div>
-  </div>
-</header>
+    </header>
+  </body>
+</html>

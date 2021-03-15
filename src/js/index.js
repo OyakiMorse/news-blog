@@ -26,8 +26,6 @@ if (darkMode === 'enabled') {
 darkModeToggle.addEventListener('click', () => {
   darkMode = localStorage.getItem('darkMode')
   darkThemeImg.src = './img/moon.png'
-  console.log(darkThemeImg, darkThemeImg.src)
-  console.log(darkMode)
   if (darkMode !== 'enabled') {
     enableDarkMode()
   } else {

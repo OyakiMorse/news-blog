@@ -46,9 +46,10 @@
     box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
   }
   .social__item,
+  .dark-theme,
   .scroll-btn {
     & img {
-      filter: invert(100%);
+      filter: grayscale(1) invert(100%);
     }
   }
   .scroll-btn {
