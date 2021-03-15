@@ -5,7 +5,35 @@ const scrollBtn = document.querySelector('.scroll-btn')
 const header = document.getElementById('header')
 const headerMenu = document.getElementById('header__menu')
 
+let darkMode = localStorage.getItem('darkMode')
+const darkModeToggle = document.getElementById('dark-mode-toggle')
+let darkThemeImg = document.querySelector('img')
 
+const enableDarkMode = () => {
+  document.body.classList.add('darkmode')
+  localStorage.setItem('darkMode', 'enabled')
+}
+
+const disableDarkMode = () => {
+  document.body.classList.remove('darkmode')
+  localStorage.setItem('darkMode', null)
+}
+
+if (darkMode === 'enabled') {
+  enableDarkMode()
+}
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode')
+  darkThemeImg.src = './img/moon.png'
+  console.log(darkThemeImg, darkThemeImg.src)
+  console.log(darkMode)
+  if (darkMode !== 'enabled') {
+    enableDarkMode()
+  } else {
+    disableDarkMode()
+  }
+})
 
 window.addEventListener('scroll', () => {
   if (

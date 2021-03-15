@@ -3,6 +3,7 @@
   padding: 0 10px 30px;
   margin: 0 auto;
   &__title {
+    padding-top: 1rem;
     font-size: 2rem;
     font-weight: 700;
     line-height: 50 / 32 * 100%;
@@ -43,7 +44,6 @@
       margin-bottom: 1rem;
       max-width: 100%;
       cursor: pointer;
-      
     }
   }
 }

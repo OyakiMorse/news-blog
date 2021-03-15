@@ -1,6 +1,6 @@
 .greet {
-  padding: 60px;
-  background: url(../img/parallax.webp);
+  padding: 3.75rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.15)), url(../img/parallax.webp);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
     padding: 0 0 70px 0;
   }
   @media (max-width: $md3 + px) {
-    padding: 0 0 20px 0;
+    padding: 1.25rem 0 1.25rem 0;
   }
   &__container {
     display: flex;
@@ -56,22 +56,22 @@
     }
   }
   &__btn {
-    margin-bottom: 25px;
+    margin-bottom: 1.56rem;
     @media (max-width: $md3 + px) {
       font-size: 1rem;
       margin-bottom: 1rem;
     }
   }
   &__avatar {
-    flex: 0 0 240px;
-    height: 240px;
+    flex: 0 0 15rem;
+    height: 15rem;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
 
     img {
-      width: 240px;
-      height: 240px;
+      width: 15rem;
+      height: 15rem;
     }
     @media (max-width: $md3 + px) {
       margin-bottom: 2rem;
@@ -81,14 +81,14 @@
 
 .recent-posts {
   background-color: $lightBlue;
-  padding: 25px 0 50px 0;
+  padding: 1.56rem 0 3.12rem 0;
   @media (max-width: $md3 + px) {
-    padding: 25px 25px;
+    padding: 1.56rem 1.56rem;
   }
   &__header {
     display: flex;
-    padding: 0 10px;
-    margin-bottom: 20px;
+    padding: 0 0.6rem;
+    margin-bottom: 1.25rem;
   }
   &__title {
     flex: 1 1 auto;
@@ -96,8 +96,8 @@
   }
 
   &__view-all {
-    font-size: 16px;
-    line-height: 23px;
+    font-size: 1rem;
+    line-height: 1.43rem;
     color: #1eb2d2;
     flex: 0 0 auto;
     &:hover {
@@ -109,7 +109,7 @@
     }
   }
   &__items {
-    padding: 10px -10px;
+    padding: 0.6rem -0.6rem;
     @media (min-width: $md3 + px) {
       display: flex;
     }
@@ -117,17 +117,17 @@
 
   &__column {
     flex: 0 1 50%;
-    padding: 0 10px;
-    margin-bottom: 15px;
+    padding: 0 0.6rem;
+    margin-bottom: 0.93rem;
   }
 }
 
 .recent-post {
   height: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(187, 225, 250, $alpha: 0.25);
+  box-shadow: 0 0.25rem 0.6rem rgba(187, 225, 250, $alpha: 0.25);
   @media (max-width: $md3 + px) {
     padding: 1rem;
   }
@@ -136,9 +136,9 @@
   }
   &__title {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: inherit;
-    font-size: 26px;
+    font-size: 1.62rem;
     font-weight: 700;
     line-height: 38 / 26 * 100%;
     transition: all 0.3s ease;
@@ -147,12 +147,12 @@
       cursor: pointer;
     }
     @media (max-width: $md3 + px) {
-      font-size: 22px;
+      font-size: 1.37rem;
       margin-bottom: 1rem;
     }
   }
   &__info {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     @media (max-width: $md3 + px) {
       font-size: 1rem;
       margin-bottom: 1rem;

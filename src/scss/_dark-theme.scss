@@ -1,0 +1,62 @@
+.darkmode {
+  $clrText: #fcfcfc;
+  $bgClr: #21243d;
+  $bgElement: #20202f;
+
+  color: $clrText;
+  background-color: $bgClr;
+  .greet__text {
+    color: $bgElement !important;
+  }
+  .text,
+  .title {
+    color: $clrText;
+  }
+  .header {
+    background-color: $bgElement;
+    .menu__link {
+      color: $clrText;
+      &:hover {
+        color: $btnClr;
+      }
+      &.--active {
+        color: #ff6464;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .menu__nav {
+        background-color: rgba($color: $bgElement, $alpha: 0.991);
+      }
+      .icon-menu span {
+        background-color: $clrText;
+      }
+    }
+  }
+  .article__year {
+    box-shadow: 0 0 1.4rem -0.37rem #ff3b3b;
+  }
+  .scroll-indicator {
+    box-shadow: 0 0.06rem 0.87rem 0 #ff3b3b;
+  }
+  .recent-posts {
+    background-color: $bgClr;
+  }
+  .recent-post {
+    background-color: $bgElement;
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
+  }
+  .social__item,
+  .scroll-btn {
+    & img {
+      filter: invert(100%);
+    }
+  }
+  .scroll-btn {
+    &:hover {
+      border: 2px solid rgba($color: $clrText, $alpha: 0.7);
+    }
+  }
+  .footer {
+    background-color: $bgElement;
+  }
+}
